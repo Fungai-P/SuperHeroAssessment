@@ -13,6 +13,7 @@ There are 3 functional endpoints, 2 GET endpoints and 1 POST endpoint. The two G
  * Unit tests.
  * Validation to prevent dirty or invalid inputs.
  * Security (Oauth2)
+ * Logging
 
 ## Deployment
 A pipleline can be configured to pull the code from the repository, compile it and deploy the artifacts to instances.
