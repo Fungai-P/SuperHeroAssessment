@@ -21,6 +21,10 @@ namespace SuperHeroAssessment.Application.Handlers
         public async Task<string> Handle(StoreSuperHeroRequest request, CancellationToken cancellationToken)
         {
             var superHero = await _superHeroApiService.GetSuperHero(request.Id);
+            if (superHero == null)
+            {
+                return null;
+            }
 
             var result = _superHeroRepository.Add(superHero.Map(true));
 

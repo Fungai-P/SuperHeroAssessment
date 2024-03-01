@@ -21,7 +21,8 @@ namespace SuperHeroAssessment.Domain.Services
             {
                 return null;
             }
-            return JsonConvert.DeserializeObject<SuperHero>(content);
+            var result = JsonConvert.DeserializeObject<SuperHero>(content);
+            return (result.Id != null) ? result : null;
         }
 
         public async Task<List<SuperHero>> SearchSuperHero(string name)
@@ -35,7 +36,7 @@ namespace SuperHeroAssessment.Domain.Services
                 return null;
             }
             var results = JsonConvert.DeserializeObject<SearchResults>(content);
-            return results.Results;
+            return results.Results ?? new List<SuperHero>();
         }
     }
 }

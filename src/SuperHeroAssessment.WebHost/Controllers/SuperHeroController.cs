@@ -15,6 +15,11 @@ namespace SuperHeroAssessment.WebHost.Controllers
             _logger = logger;
         }
 
+        /// <summary>
+        /// Retrives information on a Super Hero by Id 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -35,6 +40,11 @@ namespace SuperHeroAssessment.WebHost.Controllers
             }
         }
 
+        /// <summary>
+        /// Searched for Super Heros by name and returns a list of results.
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         [HttpGet("search/{name}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -55,6 +65,11 @@ namespace SuperHeroAssessment.WebHost.Controllers
             }
         }
 
+        /// <summary>
+        /// Store your favorite super hero into the local database
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         [HttpPost()]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<IActionResult> StoreFavoriteSuperHero(StoreSuperHeroRequest request)
@@ -62,6 +77,10 @@ namespace SuperHeroAssessment.WebHost.Controllers
             try
             {
                 var response = await Sender.Send(request);
+                if (string.IsNullOrEmpty(response))
+                {
+                    return NotFound();
+                }
                 return Ok(response);
             }
             catch (Exception ex)
