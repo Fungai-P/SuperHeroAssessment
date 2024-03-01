@@ -1,11 +1,8 @@
-﻿using MediatR;
-using SuperHeroAssessment.Api.Contracts.Responses;
-using SuperHeroAssessment.Domain.Models;
-
-namespace SuperHeroAssessment.Api.Contracts.Requests
+﻿namespace SuperHeroAssessment.Domain.Models
 {
-    public class CreateSuperHeroRequest : IRequest<BaseResponse>
+    public class SuperHero
     {
+        public string Id { get; set; }
         public string Name { get; set; }
         public Appearance Appearance { get; set; }
         public Biography Biography { get; set; }

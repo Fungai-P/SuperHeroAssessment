@@ -14,6 +14,7 @@
     <ProjectReference Include="..\SuperHeroAssessment.Api.Contracts\SuperHeroAssessment.Api.Contracts.csproj" />
     <ProjectReference Include="..\SuperHeroAssessment.Domain.Database.Entities\SuperHeroAssessment.Domain.Database.Entities.csproj" />
     <ProjectReference Include="..\SuperHeroAssessment.Domain.Database\SuperHeroAssessment.Domain.Database.csproj" />
+    <ProjectReference Include="..\SuperHeroAssessment.Domain.Services\SuperHeroAssessment.Domain.Services.csproj" />
   </ItemGroup>
 
 </Project>

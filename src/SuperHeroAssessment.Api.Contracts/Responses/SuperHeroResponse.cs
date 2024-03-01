@@ -2,8 +2,10 @@
 
 namespace SuperHeroAssessment.Api.Contracts.Responses
 {
-    public class SuperHeroResponse : BaseResponse
+    public class SuperHeroResponse
     {
+        public string Id { get; set; }
+        public string Name { get; set; }
         public Appearance Appearance { get; set; }
         public Biography Biography { get; set; }
         public PowerStats PowerStats { get; set; }

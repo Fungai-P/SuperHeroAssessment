@@ -1,9 +1,7 @@
-using FluentValidation;
-using FluentValidation.AspNetCore;
 using MongoDB.Driver;
-using SuperHeroAssessment.Api.Validation;
 using SuperHeroAssessment.Application.Handlers;
 using SuperHeroAssessment.Domain.Database;
+using SuperHeroAssessment.Domain.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,13 +13,12 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddMediatR(x => x.RegisterServicesFromAssembly(typeof(BaseHandler).Assembly));
-builder.Services.AddFluentValidationAutoValidation()
-    .AddFluentValidationClientsideAdapters()
-    .AddValidatorsFromAssemblyContaining<BaseValidator>();
 
 builder.Services.AddSingleton(typeof(MongoUrl), x => new MongoUrl(builder.Configuration["Mongo:ConnectionString"]));
 builder.Services.AddSingleton(typeof(IMongoClient), x => new MongoClient(builder.Configuration["Mongo:ConnectionString"]));
 builder.Services.AddScoped(typeof(IRepository<>), typeof(MongoRepository<>));
+
+builder.Services.AddHttpClient<ISuperHeroApiService, SuperHeroApiService>(c => c.BaseAddress = new Uri(builder.Configuration["SuperHeroApi:BaseUrl"]));
 
 var app = builder.Build();
 

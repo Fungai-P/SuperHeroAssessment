@@ -1,67 +1,45 @@
-﻿using SuperHeroAssessment.Api.Contracts.Requests;
-using SuperHeroAssessment.Api.Contracts.Responses;
-using SuperHeroAssessment.Domain.Database;
+﻿using SuperHeroAssessment.Api.Contracts.Responses;
 using SuperHeroAssessment.Domain.Database.Entities;
+using SuperHeroAssessment.Domain.Models;
 
 namespace SuperHeroAssessment.Application.Handlers.Mappers
 {
     public static class SuperHeroMapper
     {
-        public static SuperHeroEntity Map(this CreateSuperHeroRequest request)
+        public static SuperHeroEntity Map(this SuperHero model, bool upsert)
         {
             return new SuperHeroEntity
             {
-                Name = request.Name,
-                Appearance = request.Appearance,
-                Biography = request.Biography,
-                PowerStats = request.PowerStats,
-                Work = request.Work,
-                Connections = request.Connections,
-                Image = request.Image
+                CharacterId = model.Id,
+                Name = model.Name,
+                Appearance = model.Appearance,
+                Biography = model.Biography,
+                PowerStats = model.PowerStats,
+                Work = model.Work,
+                Connections = model.Connections,
+                Image = model.Image
             };
         }
 
-        public static SuperHeroResponse Map(this SuperHeroEntity entity)
+
+        public static SuperHeroResponse Map(this SuperHero model)
         {
             return new SuperHeroResponse
             {
-                Id = entity.Id,
-                Name = entity.Name,
-                Appearance = entity.Appearance,
-                Biography = entity.Biography,
-                PowerStats = entity.PowerStats,
-                Work = entity.Work,
-                Connections = entity.Connections,
-                Image = entity.Image
+                Id = model.Id,
+                Name = model.Name,
+                Appearance = model.Appearance,
+                Biography = model.Biography,
+                PowerStats = model.PowerStats,
+                Work = model.Work,
+                Connections = model.Connections,
+                Image = model.Image
             };
         }
 
-        public static SuperHeroEntity Map(this UpdateSuperHeroRequest request)
+        public static List<SuperHeroResponse> Map(this List<SuperHero> models)
         {
-            return new SuperHeroEntity
-            {
-                Name = request.Name,
-                Appearance = request.Appearance,
-                Biography = request.Biography,
-                PowerStats = request.PowerStats,
-                Work = request.Work,
-                Connections = request.Connections,
-                Image = request.Image
-            };
-        }
-        public static List<SuperHeroResponse> Map(this List<SuperHeroEntity> entities)
-        {
-            return entities.Select(x => new SuperHeroResponse
-            {
-                Id = x.Id,
-                Name = x.Name,
-                Appearance = x.Appearance,
-                Biography = x.Biography,
-                PowerStats = x.PowerStats,
-                Work = x.Work,
-                Connections = x.Connections,
-                Image = x.Image
-            }).ToList();
+            return models.Select(x => x.Map()).ToList();
         }
     }
 }

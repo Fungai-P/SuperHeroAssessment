@@ -3,25 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperHeroAssessment.WebHost", "src\SuperHeroAssessment.WebHost\SuperHeroAssessment.WebHost.csproj", "{F7B5AB3A-D8DC-4E3E-AB16-63BE2EB6266B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuperHeroAssessment.WebHost", "src\SuperHeroAssessment.WebHost\SuperHeroAssessment.WebHost.csproj", "{F7B5AB3A-D8DC-4E3E-AB16-63BE2EB6266B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{629ED25C-DDB2-4C24-A496-677EF5C2DAB2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{12C94E15-6D04-4DCB-88D6-DD712860AC7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperHeroAssessment.Api.Validation", "src\SuperHeroAssessment.Api.Validation\SuperHeroAssessment.Api.Validation.csproj", "{EAD84FD8-A042-4168-BB5E-B1919E38CFF8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuperHeroAssessment.Api.Contracts", "src\SuperHeroAssessment.Api.Contracts\SuperHeroAssessment.Api.Contracts.csproj", "{82279CE6-ED9B-4B53-87E4-C96250B2A5A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperHeroAssessment.Api.Contracts", "src\SuperHeroAssessment.Api.Contracts\SuperHeroAssessment.Api.Contracts.csproj", "{82279CE6-ED9B-4B53-87E4-C96250B2A5A1}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperHeroAssessment.Application.Handlers", "src\SuperHeroAssessment.Application.Handlers\SuperHeroAssessment.Application.Handlers.csproj", "{431528C7-B145-467D-B619-05D85426D55A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuperHeroAssessment.Application.Handlers", "src\SuperHeroAssessment.Application.Handlers\SuperHeroAssessment.Application.Handlers.csproj", "{431528C7-B145-467D-B619-05D85426D55A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{6004585F-47FB-4E1A-9FEE-DD1806635D40}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperHeroAssessment.Domain.Database", "src\SuperHeroAssessment.Domain.Database\SuperHeroAssessment.Domain.Database.csproj", "{9309DAF5-AC8D-455B-8DAD-E3360236A123}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuperHeroAssessment.Domain.Database", "src\SuperHeroAssessment.Domain.Database\SuperHeroAssessment.Domain.Database.csproj", "{9309DAF5-AC8D-455B-8DAD-E3360236A123}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperHeroAssessment.Domain.Models", "src\SuperHeroAssessment.Domain.Models\SuperHeroAssessment.Domain.Models.csproj", "{1D918B90-0F73-45DC-BBA4-EC82753F9639}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuperHeroAssessment.Domain.Models", "src\SuperHeroAssessment.Domain.Models\SuperHeroAssessment.Domain.Models.csproj", "{1D918B90-0F73-45DC-BBA4-EC82753F9639}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperHeroAssessment.Domain.Database.Entities", "src\SuperHeroAssessment.Domain.Database.Entities\SuperHeroAssessment.Domain.Database.Entities.csproj", "{0A1CC2E1-CA08-4F4E-934B-AD446F71D2D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuperHeroAssessment.Domain.Database.Entities", "src\SuperHeroAssessment.Domain.Database.Entities\SuperHeroAssessment.Domain.Database.Entities.csproj", "{0A1CC2E1-CA08-4F4E-934B-AD446F71D2D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperHeroAssessment.Domain.Services", "src\SuperHeroAssessment.Domain.Services\SuperHeroAssessment.Domain.Services.csproj", "{ED6E43FD-4B27-40B4-B638-C068137438A1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,10 +33,6 @@ Global
 		{F7B5AB3A-D8DC-4E3E-AB16-63BE2EB6266B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7B5AB3A-D8DC-4E3E-AB16-63BE2EB6266B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7B5AB3A-D8DC-4E3E-AB16-63BE2EB6266B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EAD84FD8-A042-4168-BB5E-B1919E38CFF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EAD84FD8-A042-4168-BB5E-B1919E38CFF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EAD84FD8-A042-4168-BB5E-B1919E38CFF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EAD84FD8-A042-4168-BB5E-B1919E38CFF8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{82279CE6-ED9B-4B53-87E4-C96250B2A5A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{82279CE6-ED9B-4B53-87E4-C96250B2A5A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82279CE6-ED9B-4B53-87E4-C96250B2A5A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -57,17 +53,21 @@ Global
 		{0A1CC2E1-CA08-4F4E-934B-AD446F71D2D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A1CC2E1-CA08-4F4E-934B-AD446F71D2D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A1CC2E1-CA08-4F4E-934B-AD446F71D2D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED6E43FD-4B27-40B4-B638-C068137438A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED6E43FD-4B27-40B4-B638-C068137438A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED6E43FD-4B27-40B4-B638-C068137438A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED6E43FD-4B27-40B4-B638-C068137438A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{EAD84FD8-A042-4168-BB5E-B1919E38CFF8} = {12C94E15-6D04-4DCB-88D6-DD712860AC7A}
 		{82279CE6-ED9B-4B53-87E4-C96250B2A5A1} = {12C94E15-6D04-4DCB-88D6-DD712860AC7A}
 		{431528C7-B145-467D-B619-05D85426D55A} = {629ED25C-DDB2-4C24-A496-677EF5C2DAB2}
 		{9309DAF5-AC8D-455B-8DAD-E3360236A123} = {6004585F-47FB-4E1A-9FEE-DD1806635D40}
 		{1D918B90-0F73-45DC-BBA4-EC82753F9639} = {6004585F-47FB-4E1A-9FEE-DD1806635D40}
 		{0A1CC2E1-CA08-4F4E-934B-AD446F71D2D4} = {6004585F-47FB-4E1A-9FEE-DD1806635D40}
+		{ED6E43FD-4B27-40B4-B638-C068137438A1} = {6004585F-47FB-4E1A-9FEE-DD1806635D40}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9915C68C-2853-4197-AA80-54C97A504D05}
