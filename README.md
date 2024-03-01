@@ -1,4 +1,4 @@
-This is a simple Restful service that consumes a third party API (https://superheroapi.com)
+This is a simple .Net core 6.0 Restful service that consumes a third party API (https://superheroapi.com)
 
 ## Architecture
 The architecture makes use of a watered down CQRS design to remove a lot of complexity and layers and is developed with SOLID Principles in mind. I made use of the MediatR Pattern. I wanted to ensures that we have loose coupling and that there is no direct communication between components. All components have a single responsibility and are open for extension.
