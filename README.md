@@ -7,7 +7,7 @@ The architecture makes use of a watered down CQRS design to remove a lot of comp
 Application entry is via the WebHost project. All API request and response classes sit in the Contracts project. In the Domain project are shared components such as the database layer, models and services consuming third party APIs.
  
 ## Endpoints
-There are 3 functional endpoints, 2 GET endpoints and 1 POST endpoint. The two GET end points internally make direct calls to a third party endpoint to retrieve data. The POST end point retireves data from the third party API and stores that data locally into a Mongo database.
+There are 3 functional endpoints, 2 GET endpoints and 1 POST endpoint. The two GET end points internally make direct calls to a third party endpoint to retrieve data. The POST end point retrieves data from the third party API and stores that data locally into a Mongo database.
  
 ## Tech Debt
  * Unit tests.
@@ -16,7 +16,7 @@ There are 3 functional endpoints, 2 GET endpoints and 1 POST endpoint. The two G
  * Logging
 
 ## Deployment
-A pipleline can be configured to pull the code from the repository, compile it and deploy the artifacts to instances.
+A pipeline can be configured to pull the code from the repository, compile it and deploy the artifacts to AWS EC2 instances.
 The service is scalable and can be placed behind a load balancer.
 
 ## Notes
